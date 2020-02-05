@@ -62,7 +62,7 @@ const Login = props => {
         <main className="container--login">
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1 className="login--header">FLAMINGO</h1>
+                    <h1 className="login--header">What Now?</h1>
                  
                     <h2>please sign in</h2>
                     <fieldset>

@@ -57,7 +57,7 @@ fieldset {
 }
 
 body {
-    background-image: url(login.jpg);
+    /* background-image: url(login.jpg); */
     background-position: cover;
     background-size: 100%;
     background-attachment: fixed;
