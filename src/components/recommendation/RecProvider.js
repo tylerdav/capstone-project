@@ -5,7 +5,7 @@ The context is imported and used by individual components
 that need data
 */
 
-export const RecommendationsContext = React.createContext()
+export const RecsContext = React.createContext()
 
 /*
 This component establishes what data can be used.

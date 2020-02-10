@@ -1,0 +1,45 @@
+.moviesContainer {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 15%;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.788);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+    position: static;
+    position: -webkit-sticky;
+    top: 0;
+    height: max-content;
+    width: 97%;
+    float: right;
+    text-align: center;
+}
+
+.movie__cards {
+    border: 1px solid white;
+    flex-wrap: wrap;
+}
+
+.movie--card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    margin: 10px;
+    flex-wrap: wrap;
+    
+}
+
+.movie__details {
+    background-color: rgba(0, 0, 0, 0.788);
+    color: white;
+    width: 95%;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+}
+
+img {
+    max-width: 200px;
+    align-self: center;
+}

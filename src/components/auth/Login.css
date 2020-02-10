@@ -57,20 +57,21 @@ fieldset {
 }
 
 body {
-    /* background-image: url(login.jpg); */
+    background-image: url(moviePosters.jpg);
     background-position: cover;
     background-size: 100%;
     background-attachment: fixed;
+    background-color: rgb(53, 53, 53);
 }
 
 .form--login {
-    color: #1d623c;
+    color: white;
     margin-top: 8%;
     z-index: 1;
     width: 40%;
     min-height: 25rem;
     min-width: 30rem;
-    background-color: #fff; 
+    background-color: rgba(0, 0, 0, 0.788); 
     background-blend-mode: overlay;
     /* border: 5px solid #1d623c; */
     border-radius: 8px;
@@ -89,7 +90,7 @@ form.form--login {
 }
 
 a{
-    color:#1d623c;
+    color:white;
     /* text-decoration: none; */
 
 }

@@ -64,9 +64,9 @@ const Login = props => {
                 <form className="form--login" onSubmit={handleLogin}>
                     <h1 className="login--header">What Now?</h1>
                  
-                    <h2>please sign in</h2>
+                    <h2>Please Sign In</h2>
                     <fieldset>
-                        <label htmlFor="inputEmail"> email </label>
+                        <label htmlFor="inputEmail"> email: </label>
                         <input ref={email} type="email"
                             id="email"
                             className="form-control"
@@ -74,7 +74,7 @@ const Login = props => {
                             required autoFocus />
                     </fieldset>
                     <fieldset>
-                        <label htmlFor="inputPassword"> password </label>
+                        <label htmlFor="inputPassword"> password: </label>
                         <input ref={password} type="password"
                             id="password"
                             className="form-control"
@@ -87,7 +87,7 @@ const Login = props => {
                     </button>
                     </fieldset>
             <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
+                <Link to="/register">Not a Member Yet?</Link>
             </section>
                 </form>
             </section>
