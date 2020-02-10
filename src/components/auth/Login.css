@@ -61,6 +61,7 @@ body {
     background-position: cover;
     background-size: 100%;
     background-attachment: fixed;
+    background-color: rgb(53, 53, 53);
 }
 
 .form--login {

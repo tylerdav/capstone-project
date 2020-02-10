@@ -5,7 +5,7 @@ The context is imported and used by individual components
 that need data
 */
 
-export const MovieContext = React.createContext()
+export const MoviesContext = React.createContext()
 
 /*
 This component establishes what data can be used.
@@ -47,15 +47,11 @@ export const MoviesProvider = (props) => {
   // }, [Movies])
 
   return (
-    <MovieContext.Provider value={{
+    <MoviesContext.Provider value={{
       movies, addMovies, deleteMovies
     }}>
       {props.children}
-    </MovieContext.Provider>
+    </MoviesContext.Provider>
   )
 }
 
-
-
-  // export movieContext
-  // export get add delete

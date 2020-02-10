@@ -1,0 +1,16 @@
+.genresContainer {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 15%;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.788);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
+    position: static;
+    position: -webkit-sticky;
+    top: 0;
+    height: max-content;
+    max-width: 201px;
+    margin-top: 15px;
+}
