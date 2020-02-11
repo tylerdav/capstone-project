@@ -57,7 +57,7 @@ fieldset {
 }
 
 body {
-    background-image: url(moviePosters.jpg);
+    /* background-image: url(moviePosters.jpg); */
     background-position: cover;
     background-size: 100%;
     background-attachment: fixed;

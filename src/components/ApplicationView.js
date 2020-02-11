@@ -1,16 +1,16 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { FollowersProvider } from "./user/FollowerProvider";
-import { RecsProvider } from "./recommendation/RecProvider";
-import { UserProvider } from "./user/UserProvider";
-import FollowerList from "./user/FollowerList";
 import { MoviesProvider } from "./movies/MovieProvider";
-import MoviesList from "./movies/MoviesList";
-// import { UserMoviesProvider } from "./userMovies/UserMovieProvider";
-// import UserMoviesList from "./userMovies/UserMoviesList";
-import GenresList from "./genres/GenresList";
-import { GenresProvider } from "./genres/GenresProvider";
+import { FollowersProvider } from "./user/FollowerProvider";
+import { UserProvider } from "./user/UserProvider";
+import { RecsProvider } from "./recommendation/RecProvider";
+// import { GenresProvider } from "./genres/GenresProvider";
 import MovieDetails from "./movies/MovieDetails";
+import FollowerList from "./user/FollowerList";
+import MoviesList from "./movies/MoviesList";
+// import GenresList from "./genres/GenresList";
+import UserMoviesList from "./movies/UserMoviesList";
+import { UserMoviesProvider } from "./movies/UserMovieProvider";
 
 
 
@@ -23,13 +23,6 @@ import MovieDetails from "./movies/MovieDetails";
 export default (props) => {
     return (
         <>
-            <UserProvider>
-                <FollowersProvider>
-                    <Route path="/profile" render={
-                        props => <FollowerList {...props} />
-                    } />
-                </FollowersProvider>
-            </UserProvider>
 
             <MoviesProvider>
                 <UserProvider>
@@ -42,18 +35,29 @@ export default (props) => {
                 </UserProvider>
             </MoviesProvider>
 
-            {/* <UserMoviesProvider>
-                <RecsProvider>
-                    <UserProvider>
-                        <FollowersProvider>
-                            <Route exact path="/profile" render={
-                                props => <UserMoviesList {...props} />
-                            } />
-                        </FollowersProvider>
-                    </UserProvider>
-                </RecsProvider>
-            </UserMoviesProvider> */}
+            <UserMoviesProvider>
+                <MoviesProvider>
+                    <RecsProvider>
+                        <UserProvider>
+                            <FollowersProvider>
+                                <Route path="/profile" render={
+                                    props => <FollowerList {...props} />
+                                } />
+                                <Route exact path="/profile" render={
+                                    props => <UserMoviesList {...props} />
+                                } />
+                                <Route path="/movies/:movieId(\d+)" render={
+                                    props => <MovieDetails {...props} />
+                                } />
+                            </FollowersProvider>
+                        </UserProvider>
+                    </RecsProvider>
+                </MoviesProvider>
+            </UserMoviesProvider>
+            
 
+
+            
             {/*             
             <GenresProvider>
                 <Route path="/" render={
