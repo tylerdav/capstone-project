@@ -52,10 +52,11 @@
 .movie__details {
     background-color: rgba(0, 0, 0, 0.788);
     color: white;
-    width: 95%;
+    width: 50%;
     align-items: center;
     text-align: center;
     padding: 15px;
+    margin-left: 25%;
 }
 
 img {
@@ -67,4 +68,8 @@ img {
     align-self: center;
     padding: 10px;
     margin-bottom: 20px;
+}
+
+.movie__summary {
+    text-align: left;
 }

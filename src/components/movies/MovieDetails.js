@@ -18,6 +18,8 @@ export default (props) => {
         <img src={ movie.poster } alt="Movie Poster"></img>
             <h1 className="movie__name">{movie.name}</h1>
             <div className="movie__director">Director: {movie.director}</div>
+            <div className="movie__budget">Budget: {movie.budget}</div>
+            <div className="movie__summary">Summary: {movie.summary}</div>
         </section>
     )
 }

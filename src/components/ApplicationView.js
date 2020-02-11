@@ -11,6 +11,7 @@ import MoviesList from "./movies/MoviesList";
 // import GenresList from "./genres/GenresList";
 import UserMoviesList from "./movies/UserMoviesList";
 import { UserMoviesProvider } from "./movies/UserMovieProvider";
+import "./ApplicationView.css"
 
 
 
@@ -35,10 +36,10 @@ export default (props) => {
                 </UserProvider>
             </MoviesProvider>
 
+                        <UserProvider>
             <UserMoviesProvider>
                 <MoviesProvider>
                     <RecsProvider>
-                        <UserProvider>
                             <FollowersProvider>
                                 <Route path="/profile" render={
                                     props => <FollowerList {...props} />
@@ -46,14 +47,11 @@ export default (props) => {
                                 <Route exact path="/profile" render={
                                     props => <UserMoviesList {...props} />
                                 } />
-                                <Route path="/movies/:movieId(\d+)" render={
-                                    props => <MovieDetails {...props} />
-                                } />
                             </FollowersProvider>
-                        </UserProvider>
                     </RecsProvider>
                 </MoviesProvider>
             </UserMoviesProvider>
+                        </UserProvider>
             
 
 

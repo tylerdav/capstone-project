@@ -7,6 +7,7 @@ export default ({ movie }) => (
         <img src={ movie.poster } alt="Movie Poster"></img>
         <h3 className="movie--name">{ movie.name }</h3>
         <button>Add to Favorites</button>
-        <Link to={`/movies/${movie.id}`}>Details</Link>
+        <br />
+        <Link className="details__btn" to={`/movies/${movie.id}`}>Details</Link>
     </section>
 )

@@ -11,7 +11,7 @@ export const UserMovieContext = React.createContext()
 This component establishes what data can be used.
 */
 export const UserMoviesProvider = (props) => {
-  const [UserMovies, setUserMovies] = useState([])
+  const [userMovies, setUserMovies] = useState([])
 
   const getUserMovies = () => {
     return fetch("http://localhost:8088/userMovies")
@@ -20,7 +20,7 @@ export const UserMoviesProvider = (props) => {
   }
 
   const addUserMovies = UserMovies => {
-    return fetch("http://localhost:8088/UserMovies", {
+    return fetch("http://localhost:8088/userMovies", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -31,7 +31,7 @@ export const UserMoviesProvider = (props) => {
   }
 
   const deleteUserMovies = UserMovies => {
-    return fetch(`http://localhost:8088/userMovies/${UserMovies.id}`, {
+    return fetch(`http://localhost:8088/userMovies/${userMovies.id}`, {
       method: "DELETE"
     })
       .then(getUserMovies)
@@ -48,7 +48,7 @@ export const UserMoviesProvider = (props) => {
 
   return (
     <UserMovieContext.Provider value={{
-        UserMovies, addUserMovies, deleteUserMovies
+        userMovies, addUserMovies, deleteUserMovies
     }}>
       {props.children}
     </UserMovieContext.Provider>
