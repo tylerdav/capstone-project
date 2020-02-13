@@ -23,3 +23,6 @@ export default (props) => {
         </section>
     )
 }
+
+
+// displays the layout of the details page for each movie

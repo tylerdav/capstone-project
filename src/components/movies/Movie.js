@@ -11,3 +11,7 @@ export default ({ movie }) => (
         <Link className="details__btn" to={`/movies/${movie.id}`}>Details</Link>
     </section>
 )
+
+
+// what the movie card will display
+// links movie details to card

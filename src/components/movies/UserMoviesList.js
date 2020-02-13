@@ -12,28 +12,28 @@ export default (props) => {
     const { User } = useContext(UserContext)
     const { userMovies } = useContext(UserMovieContext)
     const currentUser = parseInt(localStorage.getItem("currentUserId"))
-// debugger
-console.log(User)
+    // debugger
+    // console.log(User)
     const currentUserMovies = userMovies.filter(movie => {
         return movie.userId === currentUser
-    })  
+    })
     const usersMovies = []
 
-    { 
+    {
         userMovies.forEach(rel => {
             const foundMovie = movies.filter(
                 (singleUser) => {
                     return rel.movieId === singleUser.id
                 }
             )[0]
-            usersMovies.push(foundMovie)
 
-            console.log(usersMovies)
+            if (foundMovie !== undefined) {
+                usersMovies.push(foundMovie)
+            }
         })
     }
 
     // console.log(userMovies)
-console.log(userMovies)
     return (
         <div className="userMoviesContainer">
             <h1 className="page--title">Favorite Movies</h1>

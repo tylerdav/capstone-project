@@ -12,6 +12,7 @@ import MoviesList from "./movies/MoviesList";
 import UserMoviesList from "./movies/UserMoviesList";
 import { UserMoviesProvider } from "./movies/UserMovieProvider";
 import "./ApplicationView.css"
+import RecList from "./recommendation/RecList";
 
 
 
@@ -25,37 +26,36 @@ export default (props) => {
     return (
         <>
 
-            <MoviesProvider>
-                <UserProvider>
-                    <Route exact path="/" render={
-                        props => <MoviesList {...props} />
-                    } />
-                    <Route path="/movies/:movieId(\d+)" render={
-                        props => <MovieDetails {...props} />
-                    } />
-                </UserProvider>
-            </MoviesProvider>
 
-                        <UserProvider>
-            <UserMoviesProvider>
+            <UserProvider>
                 <MoviesProvider>
-                    <RecsProvider>
-                            <FollowersProvider>
+                    <UserMoviesProvider>
+                        <FollowersProvider>
+                            <RecsProvider>
+                                <Route exact path="/" render={
+                                    props => <MoviesList {...props} />
+                                } />
+                                <Route path="/movies/:movieId(\d+)" render={
+                                    props => <MovieDetails {...props} />
+                                } />
                                 <Route path="/profile" render={
                                     props => <FollowerList {...props} />
                                 } />
                                 <Route exact path="/profile" render={
                                     props => <UserMoviesList {...props} />
                                 } />
-                            </FollowersProvider>
-                    </RecsProvider>
+                                <Route exact path="/profile" render={
+                                    props => <RecList {...props} />
+                                } />
+                            </RecsProvider>
+                        </FollowersProvider>
+                    </UserMoviesProvider>
                 </MoviesProvider>
-            </UserMoviesProvider>
-                        </UserProvider>
-            
+            </UserProvider>
 
 
-            
+
+
             {/*             
             <GenresProvider>
                 <Route path="/" render={
