@@ -37,8 +37,9 @@
   }
   
   .navbar__link:hover {
-    color: red;
+    color: orange;
     cursor: pointer;
+    transition-duration: .5s;
   }
   .icon {
     margin-left: 2em;

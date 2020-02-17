@@ -87,7 +87,7 @@ const Login = props => {
                     </button>
                     </fieldset>
             <section className="link--register">
-                <Link to="/register">Not a Member Yet?</Link>
+                <Link classNmae="member--btn" to="/register">Not a Member Yet?</Link>
             </section>
                 </form>
             </section>

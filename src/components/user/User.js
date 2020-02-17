@@ -3,7 +3,7 @@ import "./Followers.css"
 
 export default ({ user }) => (
     <section className="profile--card">
-        <img src={ user.picture } alt="User profile"></img>
+        <img className="profile--picture" src={ user.picture } alt="User profile"></img>
         <h3 className="profile--name">
         { user.name }
         </h3>

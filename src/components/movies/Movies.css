@@ -73,3 +73,31 @@ img {
 .movie__summary {
     text-align: left;
 }
+
+
+.details__btn:hover {
+    color: orange;
+    cursor: pointer;
+    transition-duration: .5s;
+  }
+
+  
+.favorite__btn {
+    background-color: rgba(0, 0, 0, 0); /* Green */
+    border: 2px solid transparent;
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+
+.favorite__btn:hover {
+    border: 2px solid orange;
+    transition-duration: 0.4s;
+}

@@ -30,6 +30,17 @@ export const MoviesProvider = (props) => {
       .then(getMovies)
   }
 
+  const editMovies = movies => {
+    return fetch(`http://localhost:8088/movies/${movies.id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(movies)
+    })
+        .then(getMovies)
+}
+
   const deleteMovies = movies => {
     return fetch(`http://localhost:8088/movies/${movies.id}`, {
       method: "DELETE"
@@ -48,7 +59,7 @@ export const MoviesProvider = (props) => {
 
   return (
     <MovieContext.Provider value={{
-      movies, addMovies, deleteMovies
+      movies, addMovies, editMovies, deleteMovies
     }}>
       {props.children}
     </MovieContext.Provider>

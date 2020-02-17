@@ -19,18 +19,18 @@ export const UserMoviesProvider = (props) => {
       .then(setUserMovies)
   }
 
-  const addUserMovies = UserMovies => {
+  const addUserMovies = userMovies => {
     return fetch("http://localhost:8088/userMovies", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(UserMovies)
+      body: JSON.stringify(userMovies)
     })
       .then(getUserMovies)
   }
 
-  const deleteUserMovies = UserMovies => {
+  const deleteUserMovies = userMovies => {
     return fetch(`http://localhost:8088/userMovies/${userMovies.id}`, {
       method: "DELETE"
     })
@@ -57,5 +57,5 @@ export const UserMoviesProvider = (props) => {
 
 
 
-  // export movieContext
+  // export userMovieContext
   // export get add delete

@@ -13,6 +13,7 @@ import UserMoviesList from "./movies/UserMoviesList";
 import { UserMoviesProvider } from "./movies/UserMovieProvider";
 import "./ApplicationView.css"
 import RecList from "./recommendation/RecList";
+import MovieForm from "./movies/MovieForm";
 
 
 
@@ -38,14 +39,20 @@ export default (props) => {
                                 <Route path="/movies/:movieId(\d+)" render={
                                     props => <MovieDetails {...props} />
                                 } />
-                                <Route path="/profile" render={
+                                <Route path="/profile/:userId(\d+)" render={
                                     props => <FollowerList {...props} />
                                 } />
-                                <Route exact path="/profile" render={
+                                <Route exact path="/profile/:userId(\d+)" render={
                                     props => <UserMoviesList {...props} />
                                 } />
-                                <Route exact path="/profile" render={
+                                <Route exact path="/profile/:userId(\d+)" render={
                                     props => <RecList {...props} />
+                                } />
+                                <Route exact path="/movies/create" render={
+                                    props => <MovieForm {...props} />
+                                } />
+                                <Route path="/movies/edit/:moviesId(\d+)" render={
+                                    props => <MovieForm {...props} />
                                 } />
                             </RecsProvider>
                         </FollowersProvider>
