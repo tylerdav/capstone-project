@@ -1,16 +1,19 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { FollowersProvider } from "./user/FollowerProvider";
-import { RecsProvider } from "./recommendation/RecProvider";
-import { UserProvider } from "./user/UserProvider";
-import FollowerList from "./user/FollowerList";
 import { MoviesProvider } from "./movies/MovieProvider";
-import MoviesList from "./movies/MoviesList";
-// import { UserMoviesProvider } from "./userMovies/UserMovieProvider";
-// import UserMoviesList from "./userMovies/UserMoviesList";
-import GenresList from "./genres/GenresList";
-import { GenresProvider } from "./genres/GenresProvider";
+import { FollowersProvider } from "./user/FollowerProvider";
+import { UserProvider } from "./user/UserProvider";
+import { RecsProvider } from "./recommendation/RecProvider";
+// import { GenresProvider } from "./genres/GenresProvider";
 import MovieDetails from "./movies/MovieDetails";
+import FollowerList from "./user/FollowerList";
+import MoviesList from "./movies/MoviesList";
+// import GenresList from "./genres/GenresList";
+import UserMoviesList from "./movies/UserMoviesList";
+import { UserMoviesProvider } from "./movies/UserMovieProvider";
+import "./ApplicationView.css"
+import RecList from "./recommendation/RecList";
+import MovieForm from "./movies/MovieForm";
 
 
 
@@ -23,36 +26,42 @@ import MovieDetails from "./movies/MovieDetails";
 export default (props) => {
     return (
         <>
+
+
             <UserProvider>
-                <FollowersProvider>
-                    <Route path="/profile" render={
-                        props => <FollowerList {...props} />
-                    } />
-                </FollowersProvider>
+                <MoviesProvider>
+                    <UserMoviesProvider>
+                        <FollowersProvider>
+                            <RecsProvider>
+                                <Route exact path="/" render={
+                                    props => <MoviesList {...props} />
+                                } />
+                                <Route path="/movies/:movieId(\d+)" render={
+                                    props => <MovieDetails {...props} />
+                                } />
+                                <Route path="/profile/:userId(\d+)" render={
+                                    props => <FollowerList {...props} />
+                                } />
+                                <Route exact path="/profile/:userId(\d+)" render={
+                                    props => <UserMoviesList {...props} />
+                                } />
+                                <Route exact path="/profile/:userId(\d+)" render={
+                                    props => <RecList {...props} />
+                                } />
+                                <Route exact path="/movies/create" render={
+                                    props => <MovieForm {...props} />
+                                } />
+                                <Route path="/movies/edit/:moviesId(\d+)" render={
+                                    props => <MovieForm {...props} />
+                                } />
+                            </RecsProvider>
+                        </FollowersProvider>
+                    </UserMoviesProvider>
+                </MoviesProvider>
             </UserProvider>
 
-            <MoviesProvider>
-                <UserProvider>
-                    <Route exact path="/" render={
-                        props => <MoviesList {...props} />
-                    } />
-                    <Route path="/movies/:movieId(\d+)" render={
-                        props => <MovieDetails {...props} />
-                    } />
-                </UserProvider>
-            </MoviesProvider>
 
-            {/* <UserMoviesProvider>
-                <RecsProvider>
-                    <UserProvider>
-                        <FollowersProvider>
-                            <Route exact path="/profile" render={
-                                props => <UserMoviesList {...props} />
-                            } />
-                        </FollowersProvider>
-                    </UserProvider>
-                </RecsProvider>
-            </UserMoviesProvider> */}
+
 
             {/*             
             <GenresProvider>

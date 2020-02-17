@@ -9,7 +9,7 @@ export default (props) => {
                 <Link className="navbar__link" to="/">home</Link>
             </li>
             <li className="navbar__item">
-                <Link className="navbar__link" to="/profile">Profile</Link>
+                <Link className="navbar__link" to={`/profile/${parseInt(localStorage.getItem("currentUserId"))}`}>Profile</Link>
             </li>
             {
                 localStorage.getItem("currentUserId")

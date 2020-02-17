@@ -17,7 +17,15 @@ export default (props) => {
         <section className="movie__details">
         <img src={ movie.poster } alt="Movie Poster"></img>
             <h1 className="movie__name">{movie.name}</h1>
+            <br />
             <div className="movie__director">Director: {movie.director}</div>
+            <br />
+            <div className="movie__budget">Budget: {movie.budget}</div>
+            <br />
+            <div className="movie__summary">Summary: {movie.summary}</div>
         </section>
     )
 }
+
+
+// displays the layout of the details page for each movie
