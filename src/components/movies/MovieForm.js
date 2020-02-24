@@ -83,18 +83,6 @@ export default props => {
           </div>
         </fieldset>
 
-        {/* <fieldset>
-          <div className="form-group">
-            <label htmlFor="budget">Budget: </label>
-            <input type="text" name="budget" className="form-control"
-              proptype="varchar"
-              placeholder="Movie Budget"
-              value={movie.budget}
-              onChange={handleControlledInputChange}>
-            </input>
-          </div>
-        </fieldset> */}
-
         <fieldset>
           <div className="form-group">
             <label htmlFor="summary">Summary: </label>

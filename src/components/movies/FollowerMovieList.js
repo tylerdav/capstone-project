@@ -10,16 +10,15 @@ export default (props) => {
     const { movies } = useContext(MovieContext)
     const { users } = useContext(UserContext)
     const { userMovies } = useContext(UserMovieContext)
-    const currentUserId = parseInt(localStorage.getItem("currentUserId"))
-    // const movieName = useRef("")
-    // const currentUser = parseInt(localStorage.getItem("currentUserId"), 10)
+    const FollowerId = parseInt(props.match.params.followerId, 10)
+    console.log(FollowerId)
 
-
+    const user = users.find(a => a.id === FollowerId) || {}
 
     const followerMoviesArray = []
 
     userMovies.map(um => {
-        if (um.userId === users.id) {
+        if (um.userId === user.id) {
             movies.filter(
                 n => {
                     if (n.id === um.movieId) {
@@ -32,30 +31,14 @@ export default (props) => {
 
     console.log(users)
 
-    // const usersMovies = userMovies.filter(f => f.userId === users.id)
-
-    // let arrayOfUsersMoviesObjects = []
-
-    // usersMovies.map(follower => {
-    //     movies.find(
-    //         u => {
-    //             if (u.id === follower.followerId) {
-    //                 arrayOfUsersMoviesObjects.push(u)
-
-    //             }
-    //         })
-
-    // })
-
-
-
     return (
-        <div className="moviesContainer">
-            <h1 className="page--title">Favorite Movies</h1>
+        <div className="followerMoviesContainer">
+            <h1 className="fav--page--title">Favorite Movies</h1>
             <section className="movieList">
                 <article className="movie__cards">
                     {
                         followerMoviesArray.map(movie => {
+                            console.log(movie)
                             return <Movie key={movie.id}
                                 movie={movie}
                                 {...props} />

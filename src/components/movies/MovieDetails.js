@@ -20,8 +20,6 @@ export default (props) => {
             <br />
             <div className="movie__director">Director: {movie.director}</div>
             <br />
-            {/* <div className="movie__budget">Budget: {movie.budget}</div>
-            <br /> */}
             <div className="movie__summary">Summary: {movie.summary}</div>
             <br />
         </section>

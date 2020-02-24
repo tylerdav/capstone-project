@@ -10,28 +10,28 @@ import { Route } from "react-router-dom"
 
 
 export default (props) => {
-  const { messages } = useContext(MessagesContext)
-  const  currentUserId  = parseInt(localStorage.getItem("currentUserId"), 10)
-  const currentUserMessages = messages.filter(message => message.userId === currentUserId)
+    const { messages } = useContext(MessagesContext)
+    const currentUserId = parseInt(localStorage.getItem("currentUserId"), 10)
+    const currentUserMessages = messages.filter(message => message.userId === currentUserId)
 
-  return (
-      <>
-      <div className= "messagesContainer">
-          <h1 className="page--title">Messages</h1>
+    return (
+        <>
+            <div className="messagesContainer">
+                <h1 className="message--page--title">Messages</h1>
 
-          <Route exact path="/profile" render={
-                        props => <MessageForm {...props} />
-                    } />
-               
-    
-          <div className="message">
-              {
-                  messages.map(message => {
-                      return <Message {...props} key={message.id} message={message} />
-                  })
-              }
-          </div>
-      </div>
-      </>
-  )
+                <Route path="/profile" render={
+                    props => <MessageForm {...props} />
+                } />
+
+
+                <div className="message">
+                    {
+                        messages.map(message => {
+                            return <Message {...props} key={message.id} message={message} />
+                        })
+                    }
+                </div>
+            </div>
+        </>
+    )
 }

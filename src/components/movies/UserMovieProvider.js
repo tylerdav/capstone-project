@@ -41,11 +41,6 @@ export const UserMoviesProvider = (props) => {
     getUserMovies()
   }, [])
 
-  // useEffect(() => {
-  //     console.log("****  Movies APPLICATION STATE CHANGED  ****")
-
-  // }, [Movies])
-
   return (
     <UserMovieContext.Provider value={{
         userMovies, addUserMovies, deleteUserMovies

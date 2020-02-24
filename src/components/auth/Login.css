@@ -2,13 +2,11 @@
 
 .h1, h1 {
     font-size: 2.5rem;
-    font-family: 'Courier New', Courier, monospace;
-
+    font-family: 'Limelight';
 }
 
 .login--header {
     letter-spacing: .5em;
-    text-decoration: underline;
 }
 
 fieldset {
@@ -16,6 +14,7 @@ fieldset {
     padding: 1rem 0;
     margin: 0 auto;
     border: 0;
+    font-family: 'Montserrat', ;
 }
 
 .form--login {

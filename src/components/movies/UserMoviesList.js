@@ -85,7 +85,7 @@ export default (props) => {
 
     return (
         <div className="userMoviesContainer">
-            <h1 className="page--title">Favorite Movies</h1>
+            <h1 className="fav--page--title">Favorite Movies</h1>
             <div className="um--search">
                 <input
                     type="text"
@@ -97,7 +97,6 @@ export default (props) => {
                     proptype="varchar"
                     placeholder="Add Movie..."
                     defaultValue={""}
-                // onChange={handleControlledInputChange}
                 />
                 <button
                     type="submit"

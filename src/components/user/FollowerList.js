@@ -74,7 +74,7 @@ export default (props) => {
     return (
 
         <div className="followers">
-            <h1 className="page--title">Followers</h1>
+            <h1 className="foll--page--title">Followers</h1>
             <div className="followerForm">
                 <input
                     type="text"

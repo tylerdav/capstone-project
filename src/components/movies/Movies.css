@@ -1,3 +1,9 @@
+form.newMovie {
+align-self: center;
+    width: 70%;
+}
+
+
 .moviesContainer {
     display: flex;
     flex-direction: column;
@@ -18,7 +24,7 @@
     margin-left: 20px;
 }
 
-.userMoviesContainer {
+.userMoviesContainer, .followerMoviesContainer {
     display: flex;
     flex-direction: column;
     flex-basis: 15%;
@@ -38,6 +44,17 @@
     margin-right: 20px;
 }
 
+.movie--page--title {
+    font-size: 70px;
+    color: goldenrod;
+    margin-bottom: 0;
+}
+
+.fav--page--title {
+    font-size: 70px;
+    color: goldenrod;
+}
+
 .movie__cards {
     display: flex;
     flex-wrap: wrap;
@@ -51,6 +68,7 @@
     flex-wrap: wrap;
     margin: 10px;
     max-width: 200px;
+    font-family: 'Montserrat', ;
 }
 
 .movie__details {
@@ -125,12 +143,6 @@ img {
     border: 2px solid orange;
     transition-duration: 0.4s;
 }
-
-fieldset {
-    max-width: 75%;
-}
-
-
 
 .userMovieSearch {
   padding: 6px;
