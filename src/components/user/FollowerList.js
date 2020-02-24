@@ -29,17 +29,6 @@ export default (props) => {
 
     })
 
-
-    // const handleControlledInputChange = event => {
-
-    //     const newFollower = Object.assign({}, follower);
-    //     newFollower[event.target.name] = event.target.value;
-    //     setFollower(newFollower);
-
-    // };
-
-
-
     let searchResultsArray = []
     const constructNewFollowerArray = () => {
         const searchTerm = followerName.current.value.toUpperCase()

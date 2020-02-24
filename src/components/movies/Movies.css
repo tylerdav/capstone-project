@@ -1,19 +1,21 @@
 .moviesContainer {
     display: flex;
     flex-direction: column;
-    flex-basis: 15%;
     padding: 1em;
     background-color: rgba(0, 0, 0, 0.788);
+    background-color: rgb(0, 0, 0);
     color: white;
     border-radius: 10px;
     box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
     position: static;
     position: -webkit-sticky;
     height: max-content;
-    width: 96%;
-    float: right;
+    width: 95%;
+    float: center;
     text-align: center;
     align-self: center;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .userMoviesContainer {
@@ -21,17 +23,19 @@
     flex-direction: column;
     flex-basis: 15%;
     padding: 1em;
-    background-color: rgba(0, 0, 0, 0.788);
+    /* background-color: rgba(0, 0, 0, 0.788); */
+    background-color: rgb(0, 0, 0);
     color: white;
     border-radius: 10px;
     box-shadow: 0 0 0 1px rgba(0,0,0,.15), 0 2px 3px rgba(0,0,0,.2);
     position: static;
     position: -webkit-sticky;
     height: max-content;
-    width: 65%;
+    width: 76%;
     float: right;
     text-align: center;
     align-self: center;
+    margin-right: 20px;
 }
 
 .movie__cards {
@@ -46,7 +50,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     margin: 10px;
-    
+    max-width: 200px;
 }
 
 .movie__details {
@@ -94,10 +98,56 @@ img {
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
-
 }
 
 .favorite__btn:hover {
     border: 2px solid orange;
     transition-duration: 0.4s;
+}
+
+.add__movie {
+    background-color: rgba(0, 0, 0, 0); /* Green */
+    border: 2px solid transparent;
+    width: 17%;
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    align-self: center;
+}
+
+.add__movie:hover {
+    border: 2px solid orange;
+    transition-duration: 0.4s;
+}
+
+fieldset {
+    max-width: 75%;
+}
+
+
+
+.userMovieSearch {
+  padding: 6px;
+  font-size: 17px;
+  border: none;
+  max-width: 230px;
+}
+
+.userMoviebtn {
+    padding: 6px 10px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    margin-left: 3px;
+}
+
+.um--search {
+    margin-bottom: 15px;
 }

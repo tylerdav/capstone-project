@@ -10,11 +10,12 @@ export default (props) => {
     return (
         <div className="moviesContainer">
             <h1 className="page--title">Movies</h1>
-            <input className="search__bar" placeholder="Search by Title"></input>
+            {/* <input className="search__bar" placeholder="Search by Title"></input> */}
             <br />
-            <button onClick={() => props.history.push("/movies/create")}>
-                    Add a Movie
-                </button>
+            <button onClick={() => props.history.push("/movies/create")} className="add__movie">
+                Add a Movie
+            </button>
+            {/* <Search /> */}
             <br />
             <section className="movieList">
                 <article className="movie__cards">

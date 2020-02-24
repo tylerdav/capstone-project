@@ -58,24 +58,53 @@ fieldset {
 }
 
 body {
-    background-image: url(moviePosters.jpg);
+    background-image: url(theaterSeats.jpg);
     background-position: cover;
     background-size: 100%;
     background-attachment: fixed;
-    background-color: rgb(53, 53, 53);
+    background-color: rgb(28, 28, 28);
 }
 
 .form--login {
     color: white;
-    margin-top: 8%;
+    margin-top: 4%;
     z-index: 1;
     width: 40%;
     min-height: 25rem;
     min-width: 30rem;
-    background-color: rgba(0, 0, 0, 0.788); 
+    /* background-color: rgba(0, 0, 0, 0.582);  */
     background-blend-mode: overlay;
     /* border: 5px solid #1d623c; */
     border-radius: 8px;
+    /* background-image: url(moviePosters.jpg); */
+    background-position: cover;
+    background-size: 100%;
+    background-attachment: fixed;
+    /* border: 2px solid black; */
+}
+
+.form--login--r {
+    color: white;
+    margin-top: 1%;
+    z-index: 1;
+    width: 40%;
+    min-height: 25rem;
+    min-width: 30rem;
+    /* background-color: rgba(0, 0, 0, 0.582);  */
+    background-blend-mode: overlay;
+    /* border: 5px solid #1d623c; */
+    border-radius: 8px;
+    /* background-image: url(moviePosters.jpg); */
+    background-position: cover;
+    background-size: 100%;
+    background-attachment: fixed;
+    /* border: 2px solid black; */
+}
+
+.form--login--r {
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
 }
 
 form.form--login {
