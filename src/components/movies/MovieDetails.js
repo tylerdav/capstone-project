@@ -15,14 +15,15 @@ export default (props) => {
 
     return (
         <section className="movie__details">
-        <img src={ movie.poster } alt="Movie Poster"></img>
+            <img src={movie.poster} alt="Movie Poster"></img>
             <h1 className="movie__name">{movie.name}</h1>
             <br />
             <div className="movie__director">Director: {movie.director}</div>
             <br />
-            <div className="movie__budget">Budget: {movie.budget}</div>
-            <br />
+            {/* <div className="movie__budget">Budget: {movie.budget}</div>
+            <br /> */}
             <div className="movie__summary">Summary: {movie.summary}</div>
+            <br />
         </section>
     )
 }

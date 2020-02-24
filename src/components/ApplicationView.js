@@ -14,6 +14,10 @@ import { UserMoviesProvider } from "./movies/UserMovieProvider";
 import "./ApplicationView.css"
 import RecList from "./recommendation/RecList";
 import MovieForm from "./movies/MovieForm";
+import FollowerMovieList from "./movies/FollowerMovieList";
+import { MessagesProvider } from "./messages/MessagesProvider";
+import MessagesList from "./messages/MessagesList";
+import MessageForm from "./messages/MessageForm";
 
 
 
@@ -28,38 +32,57 @@ export default (props) => {
         <>
 
 
-            <UserProvider>
-                <MoviesProvider>
-                    <UserMoviesProvider>
-                        <FollowersProvider>
-                            <RecsProvider>
-                                <Route exact path="/" render={
-                                    props => <MoviesList {...props} />
-                                } />
-                                <Route path="/movies/:movieId(\d+)" render={
-                                    props => <MovieDetails {...props} />
-                                } />
-                                <Route path="/profile/:userId(\d+)" render={
-                                    props => <FollowerList {...props} />
-                                } />
-                                <Route exact path="/profile/:userId(\d+)" render={
-                                    props => <UserMoviesList {...props} />
-                                } />
-                                <Route exact path="/profile/:userId(\d+)" render={
-                                    props => <RecList {...props} />
-                                } />
-                                <Route exact path="/movies/create" render={
-                                    props => <MovieForm {...props} />
-                                } />
-                                <Route path="/movies/edit/:moviesId(\d+)" render={
-                                    props => <MovieForm {...props} />
-                                } />
-                            </RecsProvider>
-                        </FollowersProvider>
-                    </UserMoviesProvider>
-                </MoviesProvider>
-            </UserProvider>
+            <MessagesProvider>
+                <UserProvider>
+                    <MoviesProvider>
+                        <UserMoviesProvider>
+                            <FollowersProvider>
+                                <RecsProvider>
+                                    <Route exact path="/" render={
+                                        props => <MoviesList {...props} />
+                                    } />
+                                    
+                                    <Route path="/movies/:movieId(\d+)" render={
+                                        props => <MovieDetails {...props} />
+                                    } />
 
+                                    <Route path="/profile/:userId(\d+)" render={
+                                        props => <FollowerList {...props} />
+                                    } />
+
+                                    <Route exact path="/profile/:userId(\d+)" render={
+                                        props => <UserMoviesList {...props} />
+                                    } />
+
+                                    <Route exact path="/profile/follower/:followerId(\d+)" render={
+                                        props => <FollowerMovieList {...props} />
+                                    } />
+
+                                    {/* <Route exact path="/profile/:userId(\d+)" render={
+                                    props => <RecList {...props} />
+                                } /> */}
+
+                                    <Route exact path="/movies/create" render={
+                                        props => <MovieForm {...props} />
+                                    } />
+
+                                    <Route path="/movies/edit/:moviesId(\d+)" render={
+                                        props => <MovieForm {...props} />
+                                    } />
+
+                                    <Route path="/profile" render={
+                                        props => <MessagesList {...props} />
+                                    } />
+
+                                    <Route path="/messages/edit/:messagesId(\d+)" render={
+                                        props => <MessageForm {...props} />
+                                    } />
+                                </RecsProvider>
+                            </FollowersProvider>
+                        </UserMoviesProvider>
+                    </MoviesProvider>
+                </UserProvider>
+            </MessagesProvider>
 
 
 

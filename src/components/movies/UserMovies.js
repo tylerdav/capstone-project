@@ -2,28 +2,20 @@ import React, { useContext } from "react"
 import { Link } from "react-router-dom"
 import { UserMovieContext } from "./UserMovieProvider"
 import "./Movies.css"
-import { MovieContext } from "./MovieProvider"
 
 export default ({ movie, history, userMovie }) => {
 
-    const { deleteMovies } = useContext(MovieContext)
+    const { deleteUserMovies } = useContext(UserMovieContext)
 
     function LoggedInUserButtons() {
         console.log(movie)
         if (movie.userId === parseInt(localStorage.getItem("currentUserId"))) {
             return (
                 <>
-                    <button onClick={() => {
+                    <button className="favorite__btn" onClick={() => {
                         history.push(`/movies/edit/${movie.id}`)
                     }}>Edit Movie</button>
-                    <button onClick={
-                        () => {
-                            deleteMovies(movie)
-                                .then(() => {
-                                    history.push("/profile")
-                                })
-                        }
-                    }>Delete from Favorites</button>
+
                 </>
             )
         }
@@ -36,6 +28,14 @@ export default ({ movie, history, userMovie }) => {
             <Link className="details__btn" to={`/movies/${movie.id}`}>Details</Link>
             <br />
             <div>{LoggedInUserButtons()}</div>
+            <button className="favorite__btn" onClick={
+                        () => {
+                            deleteUserMovies(userMovie)
+                                .then(() => {
+                                    history.push("/profile")
+                                })
+                        }
+                    }>Delete from Favorites</button>
         </section >
     )
 }
