@@ -35,6 +35,10 @@
   margin-left: 3px;
 }
 
+.foll--page--title {
+  color: goldenrod;
+  font-size: 45px;
+}
 
 .follower--name {
   color: #eee;

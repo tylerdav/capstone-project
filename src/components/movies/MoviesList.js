@@ -9,13 +9,11 @@ export default (props) => {
     const { movies } = useContext(MovieContext)
     return (
         <div className="moviesContainer">
-            <h1 className="page--title">Movies</h1>
-            {/* <input className="search__bar" placeholder="Search by Title"></input> */}
+            <h1 className="movie--page--title">Movies</h1>
             <br />
             <button onClick={() => props.history.push("/movies/create")} className="add__movie">
                 Add a Movie
             </button>
-            {/* <Search /> */}
             <br />
             <section className="movieList">
                 <article className="movie__cards">
