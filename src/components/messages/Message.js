@@ -33,14 +33,7 @@ export default ({ message, history }) => {
         <div className="Message__url">{message.user.name} - </div>
         <div className="message--name">{message.message}</div>
       </div>
-
-      <div className="news__author">Posted on {new Date(message.date).toLocaleDateString('en-US')}</div>
       <div>{LoggedInUserButtons()}</div>
-
-      {/* <button onClick={() => {
-                    history.push(`/message/edit/${message.id}`)
-                }}>Edit
-            </button> */}
     </section>
   );
 };

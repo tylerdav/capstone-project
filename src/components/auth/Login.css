@@ -7,6 +7,7 @@
 
 .login--header {
     letter-spacing: .5em;
+    color: goldenrod;
 }
 
 fieldset {
@@ -71,15 +72,11 @@ body {
     width: 40%;
     min-height: 25rem;
     min-width: 30rem;
-    /* background-color: rgba(0, 0, 0, 0.582);  */
     background-blend-mode: overlay;
-    /* border: 5px solid #1d623c; */
     border-radius: 8px;
-    /* background-image: url(moviePosters.jpg); */
     background-position: cover;
     background-size: 100%;
     background-attachment: fixed;
-    /* border: 2px solid black; */
 }
 
 .form--login--r {
@@ -89,15 +86,11 @@ body {
     width: 40%;
     min-height: 25rem;
     min-width: 30rem;
-    /* background-color: rgba(0, 0, 0, 0.582);  */
     background-blend-mode: overlay;
-    /* border: 5px solid #1d623c; */
     border-radius: 8px;
-    /* background-image: url(moviePosters.jpg); */
     background-position: cover;
     background-size: 100%;
     background-attachment: fixed;
-    /* border: 2px solid black; */
 }
 
 .form--login--r {
@@ -109,7 +102,6 @@ body {
 form.form--login {
         display: flex;
         flex-direction: column;
-        /* border: 1px solid #eee; */
         padding: 20px;
     }
 
@@ -120,6 +112,40 @@ form.form--login {
 
 a{
     color:white;
-    /* text-decoration: none; */
-
 }
+
+.sign--in  {
+    background-color: rgba(0, 0, 0, 0); /* Green */
+    border: 2px solid transparent;
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.sign--in {
+    text-decoration: none;}
+
+
+.sign--in:hover {
+    cursor: pointer;
+    padding: 10px;
+    transition-duration: .5s;
+    border: 2px solid orange;
+}
+
+.member--btn{
+    text-decoration: none;
+}
+
+.member--btn:hover {
+    cursor: pointer;
+    padding: 10px;
+    transition-duration: .5s;
+    border: 2px solid orange;
+  }

@@ -36,7 +36,6 @@ export default props => {
         name: movie.name,
         director: movie.director,
         genreId: movie.genreId,
-        // budget: movie.budget,
         summary: movie.summary,
         poster: movie.poster,
         userId: parseInt(localStorage.getItem("currentUserId"))
@@ -46,7 +45,6 @@ export default props => {
         name: movie.name,
         director: movie.director,
         genreId: movie.genreId,
-        // budget: movie.budget,
         summary: movie.summary,
         poster: movie.poster,
         userId: parseInt(localStorage.getItem("currentUserId"))

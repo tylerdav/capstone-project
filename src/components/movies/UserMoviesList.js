@@ -66,7 +66,7 @@ export default (props) => {
             );
             if (currentUser !== foundMovieArray[0].id) {
                 if (foundExistingFollower === undefined) {
-                    // window.confirm(`Would you like to add ${foundMovieArray[0].name} to your favorites?`)
+                    window.confirm(`Would you like to add ${foundMovieArray[0].name} to your favorites?`)
                     addUserMovies({
                         movieId: foundMovieArray[0].id,
                         userId: currentUser
