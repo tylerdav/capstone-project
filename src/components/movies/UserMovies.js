@@ -1,11 +1,11 @@
 import React, { useContext } from "react"
 import { Link } from "react-router-dom"
-import { UserMovieContext } from "./UserMovieProvider"
+import { MovieContext } from "./MovieProvider"
 import "./Movies.css"
 
-export default ({ movie, history, userMovie }) => {
+export default ({ movie, history }) => {
 
-    const { deleteUserMovies } = useContext(UserMovieContext)
+    const { deleteMovies } = useContext(MovieContext)
 
     function LoggedInUserButtons() {
         console.log(movie)
@@ -30,9 +30,9 @@ export default ({ movie, history, userMovie }) => {
             <div>{LoggedInUserButtons()}</div>
             <button className="favorite__btn" onClick={
                         () => {
-                            deleteUserMovies(userMovie)
+                            deleteMovies(movie)
                                 .then(() => {
-                                    history.push("/profile")
+                                    history.push("/profile/1")
                                 })
                         }
                     }>Delete from Favorites</button>

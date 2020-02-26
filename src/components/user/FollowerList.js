@@ -87,7 +87,6 @@ export default (props) => {
                     proptype="varchar"
                     placeholder="search for a user...   "
                     defaultValue={""}
-                // onChange={handleControlledInputChange}
                 />
                 <button
                     type="submit"

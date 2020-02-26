@@ -36,19 +36,19 @@ export default props => {
         message: message.text,
         date: Date.now(),
         userId: parseInt(localStorage.getItem("currentUserId"))
-      }).then(() => props.history.push("/profile"))
+      }).then(() => props.history.push("/profile/1"))
     } else {
       addMessages({
         message: message.text,
         date: Date.now(),
         userId: parseInt(localStorage.getItem("currentUserId")),
-    }) .then(() => props.history.push("/profile"))
+    }) .then(() => props.history.push("/profile/1"))
   }
   }
   return (
     <form className="newMessage">
       <h2 className="newMessage__name">
-        {editMode ? "Update Messages" : "New Message:"}
+        {editMode ? "Update Messages" : ""}
       </h2>
 
       <fieldset>
@@ -61,7 +61,7 @@ export default props => {
             className="form-control"
             className="message--bar"
             proptype="varchar"
-            placeholder="type something..."
+            placeholder="Add recommendation..."
             defaultValue={message.text}
             onChange={handleControlledInputChange}
           />
@@ -76,7 +76,7 @@ export default props => {
         className="btn btn-primary"
         className="message--add"
       >
-        {editMode ? "Save Updates" : "Save"}
+        {editMode ? "Save Update" : "Save"}
       </button>
     </form>
   )

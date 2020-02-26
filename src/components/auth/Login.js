@@ -63,7 +63,7 @@ const Login = props => {
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
                     <h1 className="login--header">What Now?</h1>
-                 
+
                     <h2>Log in:</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email </label>
@@ -82,13 +82,15 @@ const Login = props => {
                             required />
                     </fieldset>
                     <fieldset>
-                        <button type="submit">
+                        <button
+                            className="sign--in"
+                            type="submit">
                             Sign in
-                    </button>
+                        </button>
                     </fieldset>
-            <section className="link--register">
-                <Link classNmae="member--btn" to="/register">Not a Member Yet?</Link>
-            </section>
+                    <section className="link--register">
+                        <Link className="member--btn" to="/register">Not a Member Yet?</Link>
+                    </section>
                 </form>
             </section>
         </main>
