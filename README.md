@@ -6,7 +6,7 @@ This was my first solo react build. Took just under three weeks to create. My go
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 You can run this project using 
-
+ 
 ### `npm install`
 
 ### `npm start`
