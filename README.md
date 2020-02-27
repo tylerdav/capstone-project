@@ -18,7 +18,9 @@ You can use this json database to get started.
 If a movie poster no longer works you can just delete the poster all together from the site or use the edit to add a new image address.
 
 
-
+![Login Image](HomeImage.png)
+![Home Photos](LogInImage.png)
+![Profile Photos](ProfileImage.png)
 
 Use this for your Api
 
